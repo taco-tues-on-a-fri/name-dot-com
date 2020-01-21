@@ -1,6 +1,7 @@
 import React from "react";
 import "./index.css";
 import ReactDom from "react-dom";
+import SnowFlakes from "./components/Snow";
 
 function App() {
   return (
