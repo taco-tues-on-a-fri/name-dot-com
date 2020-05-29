@@ -35,7 +35,26 @@ ul {
 
 li {
   list-style: none;
-  text-align: -webkit-match-parent;
+  /* text-align: -webkit-match-parent; */
+}
+
+div {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.root {
+  display: grid;
+  position: relative;
+  overflow-x: hidden;
+  height: 100%;
 }
 
 .nav-bar {
@@ -48,7 +67,7 @@ li {
   justify-items: center;
   justify-self: center;
   margin-top: 10px;
-  padding: 0.96rem;
+  padding: 0.96rem 0.96rem 0 0.96rem;
 }
 
 .nav-list-item {
@@ -77,8 +96,8 @@ li {
   color: #fff;
   font-size: 2.2018rem;
   font-weight: 300;
-  line-height: 2.25rem;
-  margin: 30px 0;
+  line-height: 1.25rem;
+  margin: 15px 0 30px 0;
   text-align: center;
   text-shadow: 0 1.1px 2px rgba(0, 0, 0, 0.25);
 }
@@ -88,6 +107,23 @@ li {
   transform: translate3D(0, -2px, 0);
 }
 
+.card {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1), 0 1px 6px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1),
+    0 1px 6px rgba(0, 0, 0, 0.15);
+  justify-self: center;
+  margin: auto;
+  margin-top: 15%;
+  max-width: 600px;
+  padding-bottom: 2.45rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 2.45rem;
+  position: relative;
+  text-align: center;
+}
 .card:hover {
   box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
   transform: translate3D(0, -2px, 0);
@@ -95,15 +131,23 @@ li {
 
 @media only screen and (min-width: 1200px) {
   .waves {
-    top: -5vh;
+    top: -10vh;
   }
 }
 @media only screen and (min-width: 992px) {
+  .card {
+    padding-left: 3.45rem;
+    padding-right: 3.45rem;
+  }
   .waves {
     width: 100vw;
   }
 }
 @media only screen and (min-width: 768px) {
+  .card {
+    padding-left: 3.45rem;
+    padding-right: 3.45rem;
+  }
   .nav-list-item {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -111,7 +155,7 @@ li {
     padding-right: 1.5rem;
   }
   .waves {
-    top: -5vh;
+    top: -20vh;
     width: 125vw;
   }
 }
