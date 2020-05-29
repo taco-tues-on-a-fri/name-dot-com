@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './app/index.js',
+  entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'index_bundle.js',
@@ -12,7 +12,13 @@ module.exports = {
   module: {
     rules: [
       { test: /\.(js)$/, use: 'babel-loader' },
-      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]}
+      { test: /\.css$/, use: [ 'style-loader', 'css-loader' ]},
+      { 
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [ 
+          'file-loader',
+        ]
+      }
     ]
   },
   mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
@@ -21,11 +27,14 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: 'app/index.html'
+      template: './src/index.html'
     }),
-    new CopyPlugin([
-      { from: '_redirects'}
-    ])
+    new CopyPlugin({
+      patterns: [
+        { from: '_redirects'},
+        { from: './src/static'}
+      ],
+    }),
   ],
   devServer: {
     historyApiFallback: true
