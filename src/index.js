@@ -9,17 +9,17 @@ function App() {
         <ul className="nav-list">
           <li className="nav-list-item">
             <a href="https://github.com/taco-tues-on-a-fri">
-              <img src="./src/static/github-logo-face.svg" className="nav-logo"/>
+              <img src="https://sticky-haircut.s3.us-east-2.amazonaws.com/static/icon/github-logo-face.svg" className="nav-logo"/>
             </a>
           </li>
           <li className="nav-list-item">
             <a href="https://www.linkedin.com/in/mike-jadick/">
-              <img src="./src/static/linked-in-logo.svg" className="nav-logo"/>
+              <img src="https://sticky-haircut.s3.us-east-2.amazonaws.com/static/icon/linked-in-logo.svg" className="nav-logo"/>
             </a>
           </li>
         </ul>
       </nav>
-      <img className="waves" src="./src/static/cerulean-wave.svg" />
+      <img className="waves" src="https://sticky-haircut.s3.us-east-2.amazonaws.com/static/bk/cerulean-wave.svg" />
       <h1 className="greeting">Hi, I'm Michael Jadick</h1>
       <div className="card">
         <h2 className="card-title">Full Stack Developer</h2>
