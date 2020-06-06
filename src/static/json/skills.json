@@ -1,0 +1,50 @@
+{
+  "language": [
+    "JavaScript",
+    "TypeScript",
+    "HTML",
+    "CSS",
+    "SQL",
+    "Google Apps Script"
+  ],
+  "framework_library": [
+    "React",
+    "React Native",
+    "Electron",
+    "Node",
+    "Express",
+    "Vue",
+    "Weex",
+    "MobX",
+    "Bootstrap",
+    "MobX State Tree"
+  ],
+  "database": [
+    "MongoDB",
+    "PostgreSQL"
+  ],
+  "cloud": [
+    "Google Cloud Services",
+    "AWS"
+  ],
+  "tool": [
+    "Git",
+    "npm",
+    "REST",
+    "Webpack",
+    "Babel",
+    "ESLint",
+    "Docker",
+    "Yarn",
+    "Pug/Jade",
+    "Reactstrap"
+  ],
+  "other": [
+    "Git",
+    "REST",
+    "Docker",
+    "Pug/Jade",
+    "npm",
+    "Yarn"
+  ]
+}
