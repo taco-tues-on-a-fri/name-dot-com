@@ -1,0 +1,7 @@
+/configs/
+/dist/
+backup.*
+/backup/
+idea.*
+/idea/
+.txt

@@ -2,35 +2,24 @@
   "name": "name-dot-com",
   "version": "0.0.2",
   "description": "Project Site",
-  "main": "src/index.js",
+  "main": "index.js",
+  "author": "taco-tues-on-a-fri",
+  "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server",
+    "startTest": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.dev.js",
     "build": "NODE_ENV='production' webpack",
+    "buildTest": "cross-env NODE_ENV=production webpack --config config/webpack.prod.js",
     "build-for-windows": "SET NODE_ENV='production' && webpack"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ],
-    "plugins": [
-      "@babel/plugin-proposal-class-properties",
-      "syntax-dynamic-import"
-    ]
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/taco-tues-on-a-fri/name-dot-com"
   },
   "keywords": [
     "React",
     "Portfolio",
     "Personal"
   ],
-  "author": "taco-tues-on-a-fri",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/taco-tues-on-a-fri/name-dot-com/issues"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taco-tues-on-a-fri/name-dot-com"
   },
   "homepage": "https://github.com/taco-tues-on-a-fri/name-dot-com#readme",
   "devDependencies": {
@@ -38,23 +27,31 @@
     "@babel/plugin-proposal-class-properties": "^7.8.3",
     "@babel/preset-env": "^7.10.0",
     "@babel/preset-react": "^7.10.0",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
-    "chokidar": "^3.4.0",
+    "clean-webpack-plugin": "^3.0.0",
     "copy-webpack-plugin": "^6.0.1",
+    "cross-env": "^7.0.2",
     "css-loader": "^3.5.3",
+    "cssnano": "^4.1.10",
     "eslint": "^7.1.0",
     "eslint-loader": "^4.0.2",
     "eslint-plugin-react": "^7.20.0",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "prop-types": "^15.7.2",
     "react-dev-utils": "^10.2.1",
     "serialize-javascript": "^3.0.0",
     "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^2.3.5",
+    "url-loader": "^4.0.0",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
   },
   "dependencies": {
     "react": "^16.13.1",
