@@ -3,10 +3,20 @@ import './index.css'
 import ReactDom from 'react-dom'
 const skillsJson = require('./static/json/skills.json')
 
+const getFontSize = (string) => {
+  if (string.length >= 15 && string.length <= 20) {
+    return 'font-small'  
+  } else if (string.length >= 21 && string.length <= 29) {
+    return 'font-extra-small'
+  } else if (string.length > 29) {
+    return 'font-extra-extra-small'
+  } else {
+    return 'font-normal'
+  }
+}
 function SkillList ({ categoryKey, categoryArray }) {
   
   const getCategoryStyle = (categoryKey) => {
-    console.log('getCategoryStyle: key:', categoryKey)
     let style = ''
     switch(categoryKey) {
     case 'language':
@@ -33,7 +43,7 @@ function SkillList ({ categoryKey, categoryArray }) {
   return (
     <ul className="skills-list">
       {categoryArray.map((item) => (
-        <li key={item} className={`skills-list-item ${getCategoryStyle(categoryKey)}`}>{item}</li>
+        <li key={item} className={`skills-list-item ${getFontSize(item)} ${getCategoryStyle(categoryKey)}`}>{item}</li>
       ))}
     </ul>
   )
@@ -57,55 +67,47 @@ function App () {
           </li>
         </ul>
       </nav>
-      <div className="utility-padding-2" />
       <h1 className="greeting">Hi, I'm Michael Jadick</h1>
-      <div className="utility-padding-3" />
+      <div className="utility-padding-2" />
       <div className="card">
-        <div className="utility-padding-3" />
         <h2 className="card-title">Full Stack Developer</h2>
-        <div className="utility-padding-1" />
-        <div className="utility-padding-3" />
         <p className="card-body-text">Currently working at MeetKai as a front end developer.</p>
-        <div className="utility-padding-2" />
       </div>
       <section className="skills-section">
-        <div className="utility-padding-3" />
         <header className="skills-header">
           <h2 className="skills-header-title">Skills</h2>
-          <div className="utility-padding-1" />
           <hr className="skills-header-underline" />
         </header>
-        <div className="utility-padding-2" />
         <div className="list-container">
-          <h3 className="list-subheader">Languages</h3>
+          <h3 className="list-title">Languages</h3>
           <SkillList 
             categoryKey="language"
             categoryArray={skillsJson.language}
           />
         </div>
         <div className="list-container">
-          <h3 className="list-subheader">Frameworks & Libraries</h3>
+          <h3 className="list-title">Frameworks & Libraries</h3>
           <SkillList 
             categoryKey="framework_library"
             categoryArray={skillsJson.framework_library}
           />
         </div>
         <div className="list-container">
-          <h3 className="list-subheader">Tools & Services</h3>
+          <h3 className="list-title">Tools & Services</h3>
           <SkillList 
             categoryKey="tool"
             categoryArray={skillsJson.tool}
           />
         </div>
         <div className="list-container">
-          <h3 className="list-subheader">Cloud Services</h3>
+          <h3 className="list-title">Cloud Services</h3>
           <SkillList 
             categoryKey="cloud"
             categoryArray={skillsJson.cloud}
           />
         </div>
         <div className="list-container">
-          <h3 className="list-subheader">Databases</h3>
+          <h3 className="list-title">Databases</h3>
           <SkillList 
             categoryKey="database"
             categoryArray={skillsJson.database}
