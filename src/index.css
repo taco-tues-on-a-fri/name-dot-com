@@ -122,10 +122,18 @@ section {
   height: 11vw;
   padding-left: 0.1875rem;
   padding-right: 0.1875rem;
+  transition: all 0.2s linear;
 }
-.nav-logo:hover {
+/* .nav-logo:hover {
   box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
   transform: translate3D(0, -2px, 0);
+} */
+/* .skills-list-item:hover, */
+.nav-logo:hover {
+  box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
+  transform: translate3D(0, -2px, 0);
+  opacity: 1;
 }
 .greeting {
   /* background-color: lightslategray; */
@@ -225,6 +233,7 @@ section {
 }
 .skills-list-item {
   /* background-color: aqua; */
+  /* display: inline-block; */
   padding-bottom: 0.1rem;
   color: #387ba5;
   line-height: 1.25rem;
