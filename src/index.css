@@ -1,11 +1,9 @@
 * {
   box-sizing: border-box;
 }
-
 a {
   color: #fff;
 }
-
 a,
 a:visited,
 a:hover,
@@ -13,7 +11,6 @@ a:focus,
 a:active {
   text-decoration: none;
 }
-
 body {
   background-color: #f6f8fd;
   font-family: "Dosis", sans-serif;
@@ -22,13 +19,12 @@ body {
   line-height: 1.5rem;
   margin: 0px;
 }
-
 p {
   font-size: 1rem;
   font-weight: 300;
   letter-spacing: 0.1rem;
 }
-
+h2,
 ul {
   display: block;
   list-style-type: disc;
@@ -38,12 +34,10 @@ ul {
   margin-inline-start: 0px;
   padding-inline-start: 0px;
 }
-
 li {
   list-style: none;
   text-align: -webkit-match-parent;
 }
-
 li,
 h1,
 h2,
@@ -59,7 +53,6 @@ div {
   padding: 0;
   vertical-align: baseline;
 }
-
 section {
   display: block;
 }
@@ -98,11 +91,9 @@ section {
   z-index: -1;
 }
 .nav-bar {
-  /* background-color: green; */
   display: grid;
 }
 .nav-list {
-  /* background-color: lightslategray; */
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
@@ -113,22 +104,16 @@ section {
   padding-top: 0.7rem;
 }
 .nav-list-item {
-  /* background-color: #1f4574; */
   line-height: 0;
   padding-left: 0.2875rem;
   padding-right: 0.2875rem;
 }
 .nav-logo {
-  height: 11vw;
+  height: 3rem;
   padding-left: 0.1875rem;
   padding-right: 0.1875rem;
   transition: all 0.2s linear;
 }
-/* .nav-logo:hover {
-  box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
-  transform: translate3D(0, -2px, 0);
-} */
-/* .skills-list-item:hover, */
 .nav-logo:hover {
   box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
   -webkit-box-shadow: 2px 8px 45px rgba(0, 0, 0, 0.15);
@@ -136,16 +121,16 @@ section {
   opacity: 1;
 }
 .greeting {
-  /* background-color: lightslategray; */
   line-height: 2rem;
   padding-top: 0.6rem;
   padding-bottom: 0.2rem;
   color: #fff;
-  font-size: 2.2018rem;
+  font-size: 2.2rem;
   font-weight: 300;
   text-align: center;
   text-shadow: 0 1.1px 2px rgba(0, 0, 0, 0.25);
 }
+
 .card {
   background-color: #fff;
   border-radius: 12px;
@@ -153,8 +138,10 @@ section {
   -webkit-box-shadow: 2px 4px 25px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
-  margin: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   opacity: 0.95;
   padding-bottom: 1rem;
   padding-top: 1rem;
@@ -168,7 +155,6 @@ section {
   opacity: 1;
 }
 .card-title {
-  /* background-color: aqua; */
   padding-bottom: 1rem;
   color: #1f4574;
   font-size: 2rem;
@@ -177,7 +163,6 @@ section {
   letter-spacing: 0.1rem;
 }
 .card-body-text {
-  /* background-color: deepskyblue; */
   color: #1f4574;
   font-size: 1.2rem;
   font-weight: 300;
@@ -187,17 +172,14 @@ section {
   padding-right: 2.5rem;
   padding-bottom: 0.1rem;
 }
-.skills-section {
-  /* background-color: deepskyblue; */
+.flex-horizontal-margins {
   margin-left: 2rem;
   margin-right: 2rem;
 }
 .skills-header {
-  /* background-color: aqua; */
   padding-bottom: 0.5rem;
 }
 .skills-header-title {
-  /* background-color: lightslategray; */
   color: #1f4574;
   font-size: 1.8rem;
   font-weight: 400;
@@ -206,7 +188,7 @@ section {
   text-align: center;
 }
 .skills-header-underline {
-  /* background-color: #387ba5; */
+  background-color: #387ba5;
   border-top: 2px solid #387ba5;
   border: 0;
   height: 1px;
@@ -214,11 +196,9 @@ section {
   width: 60px;
 }
 .list-container {
-  /* background-color: white; */
   margin-bottom: 2rem;
 }
 .list-title {
-  /* background-color: grey; */
   color: #1f4574;
   font-size: 1.5rem;
   letter-spacing: 0.15rem;
@@ -232,8 +212,6 @@ section {
   grid-template-columns: repeat(2, 1fr);
 }
 .skills-list-item {
-  /* background-color: aqua; */
-  /* display: inline-block; */
   padding-bottom: 0.1rem;
   color: #387ba5;
   line-height: 1.25rem;
@@ -262,63 +240,113 @@ section {
 .skills-list-item--database:before {
   background-color: #675080;
 }
-/* @media only screen and (min-width: 571px) {
-  .skills-list {
-    grid-template-columns: repeat(3, auto);
-  }
-}
-@media only screen and (min-width: 768px) {
+
+@media screen and (min-width: 668px) {
   .waves {
-    top: -20vh;
+    top: -2vh;
     width: 125vw;
   }
-  .nav-list-item {
-    font-size: 1rem;
-    line-height: 1.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
+  .flex-horizontal-margins {
+    margin-left: 4.5rem;
+    margin-right: 4.5rem;
   }
   .card {
-    padding-left: 3.45rem;
-    padding-right: 3.45rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
   }
-  .skills-container {
-    max-width: 1200px;
-  }
-  .skills-list {
-    grid-template-columns: repeat(4, auto);
-  }
-}
-@media only screen and (min-width: 992px) {
-  .waves {
-    width: 100vw;
-  }
-  .card {
-    padding-left: 3.45rem;
-    padding-right: 3.45rem;
-  }
-  .skills-container {
-    display: grid;
-    justify-self: center;
-    padding: 0;
+  .card-title {
+    padding-bottom: 2rem;
   }
   .skills-list {
-    grid-template-columns: repeat(5, auto);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
-@media only screen and (min-width: 1200px) {
-  .waves {
-    top: -10vh;
-  }
-  .skills-list {
-    grid-template-columns: repeat(6, auto);
-  }
-}
-@media only screen and (min-width: 1400px) {
+@media screen and (min-width: 758px) {
   .waves {
     top: -5vh;
+    width: 125vw;
+  }
+  .flex-horizontal-margins {
+    margin-left: 6rem;
+    margin-right: 6rem;
+  }
+  .card {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+  .card-title {
+    padding-top: 0.6rem;
+  }
+  .card-body-text {
+    padding-bottom: 0.7rem;
   }
   .skills-list {
-    grid-template-columns: repeat(7, auto);
+    grid-template-columns: repeat(3, 1fr);
   }
-} */
+}
+@media screen and (min-width: 992px) {
+  .font-normal {
+    font-size: 1.45rem;
+    letter-spacing: 0.17rem;
+  }
+  .waves {
+    top: -7.5vh;
+    width: 135vw;
+  }
+  .nav-logo {
+    height: 3rem;
+  }
+  .greeting {
+    font-size: 2.5rem;
+    padding-top: 1rem;
+  }
+  .flex-horizontal-margins {
+    margin-left: 7rem;
+    margin-right: 7rem;
+  }
+  .card-title {
+    font-size: 2.4rem;
+  }
+  .card-body-text {
+    font-size: 1.5rem;
+  }
+  .skills-header-title {
+    font-size: 2rem;
+  }
+  .skills-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .list-title {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 1100px) {
+  .waves {
+    top: -9.5vh;
+    width: 140vw;
+  }
+}
+@media screen and (min-width: 1312px) {
+  .waves {
+    top: -15vh;
+    width: 145vw;
+  }
+  .nav-logo {
+    height: 3.2rem;
+  }
+  .greeting {
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+  }
+  .flex-horizontal-margins {
+    margin-left: 9rem;
+    margin-right: 9rem;
+  }
+  .card {
+    margin-left: 20vw;
+    margin-right: 20vw;
+  }
+  .skills-header-title {
+    padding-top: 2rem;
+  }
+}

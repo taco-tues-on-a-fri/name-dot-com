@@ -69,11 +69,11 @@ function App () {
       </nav>
       <h1 className="greeting">Hi, I'm Michael Jadick</h1>
       <div className="utility-padding-2" />
-      <div className="card">
+      <div className="card flex-horizontal-margins">
         <h2 className="card-title">Full Stack Developer</h2>
         <p className="card-body-text">Currently working at MeetKai as a front end developer.</p>
       </div>
-      <section className="skills-section">
+      <section className="skills-section flex-horizontal-margins">
         <header className="skills-header">
           <h2 className="skills-header-title">Skills</h2>
           <hr className="skills-header-underline" />
