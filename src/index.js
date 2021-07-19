@@ -2,6 +2,24 @@ import React from 'react'
 import './index.css'
 import ReactDom from 'react-dom'
 const skillsJson = require('./static/json/skills.json')
+const demos = {
+  soundcloud:
+    '<iframe width="100%" height="166" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/379775672&color=%23ff5500&auto_play=true&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"></iframe>',
+
+  plotly:
+    '<iframe src="https://codesandbox.io/embed/q7jmjyplvq?fontsize=14" title="Plotly All Graph Types" allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"></iframe>',
+  snippets:
+    // '<iframe src="https://codesandbox.io/embed/js-snippets-template-e16qq?fontsize=14&hidenavigation=1&theme=dark" style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;" title="js-snippets-template" sandbox="allow-autoplay allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"></iframe>'
+    '<iframe src="https://codesandbox.io/embed/js-snippets-template-e16qq"></iframe>'
+};
+
+function Iframe ({ source }) {
+  return (
+    <div
+      dangerouslySetInnerHTML={{ __html: source ? source : "" }}
+    />
+  );
+}
 
 const getFontSize = (string) => {
   if (string.length >= 15 && string.length <= 20) {
@@ -113,6 +131,9 @@ function App () {
             categoryArray={skillsJson.database}
           />
         </div>
+      </section>
+      <section>
+        <Iframe source={demos["snippets"]} allow="autoplay" />,
       </section>
     </React.Fragment>
   )
